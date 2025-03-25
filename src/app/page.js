@@ -1,9 +1,7 @@
 "use client"
 
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import Table from "./Components/table";
-import { motion } from "framer-motion";
 
 const GaugeComponent = dynamic(() => import('react-gauge-component'), { ssr: false });
 
