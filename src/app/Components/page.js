@@ -6,10 +6,14 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav className="bg-blue-300 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center fixed">
-        <Link href="/" className="text-blue-600 text-xl font-bold">
+        <Link href="/" className="text-blue-600 text-xl font-bold" onClick={() => scrollToSection("home")}>
           SS Consultants
         </Link>
         <div className="md:hidden">
@@ -23,22 +27,22 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <Link href="#AI-Recruitment" className="text-white bg-blue-600 py-2 px-5 rounded-md">
+            <Link href="#AI-Recruitment" className="text-white bg-blue-600 py-2 px-5 rounded-md" onClick={() => scrollToSection("AI-Recruitment")}>
               Ai Recruitment
             </Link>
           </li>
           <li>
-            <Link href="#Our-Process" className="text-white bg-blue-600 py-2 px-5 rounded-md">
+            <Link href="#Our-Process" className="text-white bg-blue-600 py-2 px-5 rounded-md" onClick={() => scrollToSection("Our-Process")}>
               Our process
             </Link>
           </li>
           <li>
-            <Link href="#Our-Services" className="text-white bg-blue-600 py-2 px-5 rounded-md">
+            <Link href="#Our-Services" className="text-white bg-blue-600 py-2 px-5 rounded-md" onClick={() => scrollToSection("Our-Services")}>
               Our Services
             </Link>
           </li>
           <li>
-            <Link href="#blogs" className="text-white bg-blue-600 py-2 px-5 rounded-md">
+            <Link href="#blogs" className="text-white bg-blue-600 py-2 px-5 rounded-md" onClick={() => scrollToSection("blogs")}>
               Blogs
             </Link>
           </li>

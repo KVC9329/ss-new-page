@@ -1,10 +1,10 @@
 const Table = () => {
     return (
-      <div className="flex justify-center items-center min-h-screen p-4">
-        <div className="overflow-x-auto w-full max-w-4xl">
+      <div className="flex justify-center min-h-screen p-4 my-5">
+        <div className="overflow-x-auto w-full max-w-4xl rounded-lg">
           <table className="w-full border border-gray-300 text-left bg-white shadow-lg">
             <thead>
-              <tr className="bg-gray-200">
+              <tr className="bg-blue-400">
                 <th className="border p-4">Role Level</th>
                 <th className="border p-4">Average Time to Hire</th>
                 <th className="border p-4">Industry Benchmark</th>
